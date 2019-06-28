@@ -1,5 +1,5 @@
 {
-  "name": "auto-queue",
+  "name": "ss-auto-queue",
   "version": "0.1.0",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -9,7 +9,7 @@
   "author": "boycgit",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/boycgit/auto-queue.git"
+    "url": "git+https://github.com/boycgit/ss-auto-queue.git"
   },
   "engines": {
     "node": ">=4.0.0"

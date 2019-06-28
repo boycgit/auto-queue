@@ -7,4 +7,4 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
-* 🎸 功能初始化: 书写 AutoQueue 类 ([4279c4f](https://github.com/boycgit/auto-queue/commit/4279c4f))
+* 🎸 功能初始化: 书写 AutoQueue 类 ([4279c4f](https://github.com/boycgit/ss-auto-queue/commit/4279c4f))
