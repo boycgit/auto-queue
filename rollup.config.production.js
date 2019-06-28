@@ -6,7 +6,7 @@ var pkg = require('./package.json');
 var deps = Object.keys(pkg.dependencies || {});
 
 const targetName = 'index';
-const umdName = 'debounceThrottle';
+const umdName = 'autoQueue';
 
 // 根据配置生成所需要的插件列表
 const getPlugin = function({ shouldMinified, isES6 }) {

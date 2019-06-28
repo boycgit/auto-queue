@@ -19,14 +19,22 @@ npm install ss-auto-queue --save
 ```
 
 ```javascript
-const {debounce, throttle} = require('ss-auto-queue');
+const AutoQueue = require('ss-auto-queue');
 
-// Avoid costly calculations while the window size is in flux.
-jQuery(window).on('resize', _.debounce(calculateLayout, 150));
+// 创建自动保存队列
+const autoSaveQueue = new AutoQueue((config) => {
+    const { type, value } = config!;
+    if (type === QUEUE_OPERATION.EN) {
+        // 当入队
+    }
+    // 出队的时候，执行任务
+    if (type === QUEUE_OPERATION.DE) {
+        // 当出队
+    }
+}, 100);
 
-// Avoid excessively updating the position while scrolling.
-jQuery(window).on('scroll', _.throttle(updatePosition, 100));
-
+// 做了某操作之后，需要自动保存
+autoSaveQueue.enqueue({from: 'user', action: 'click btn'})
 ```
 
 ### Global object
@@ -37,12 +45,22 @@ Include the pre-built script.
 <script src="./dist/index.umd.min.js"></script>
 
 <script>
-const {debounce, throttle} = window.debounceThrottle;
+const AutoQueue = window.autoQueue;
 
-// Avoid costly calculations while the window size is in flux.
-jQuery(window).on('resize', _.debounce(calculateLayout, 150));
-// Avoid excessively updating the position while scrolling.
-jQuery(window).on('scroll', _.throttle(updatePosition, 100));
+// 创建自动保存队列
+const autoSaveQueue = new AutoQueue((config) => {
+    const { type, value } = config!;
+    if (type === QUEUE_OPERATION.EN) {
+        // 当入队
+    }
+    // 出队的时候，执行任务
+    if (type === QUEUE_OPERATION.DE) {
+        // 当出队
+    }
+}, 100);
+
+// 做了某操作之后，需要自动保存
+autoSaveQueue.enqueue({from: 'user', action: 'click btn'})
 
 </script>
 ```
